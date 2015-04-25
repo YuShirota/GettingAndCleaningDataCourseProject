@@ -1,2 +1,2 @@
-# GettingAndCleaningDataCourseProject
+## GettingAndCleaningDataCourseProject
 Getting and Cleaning Data Course Project
