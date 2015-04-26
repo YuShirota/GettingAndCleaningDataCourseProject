@@ -13,7 +13,10 @@ smartphone. A full description is available at the site where the data was obtai
 
 #### This work was originally represented in a following publication:
 
-Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. 
+Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly 
+Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012).
+Vitoria-Gasteiz, Spain. Dec 2012
 
 ### Getting  initial data set 
 
@@ -26,7 +29,8 @@ Original file is available to download by the following link:
 ### following files which were used in performing analisys
 
 #### Common data files:
-- 'features.txt': List of all features.Represented as two columns space separated text data file
+- 'features.txt': List of all features.Represented as two columns space separated 
+text data file
 - 'activity_labels.txt': Links the class labels with their activity name.Represented
 as two columns space separated text data file
 
@@ -277,8 +281,8 @@ of measured features grouped by each subject and each activity. Data set has
 ### Processing of data
 
 Resulting data set was obtained by running provided R script run_analysis.R
-        Instruction for it's usage provided in a README file. Here is described how that
-        script works in details. 
+        Instruction for it's usage provided in a README file. Here is described 
+        how that script works in details. 
         
 The script does all the needed operations with data, from loading from the 
 provided link to write result data table into a text comma separated file. 
@@ -407,6 +411,6 @@ result_data <- all_data[,
 ```
 
 Result data was written as comma separated text file (.txt) using table.write
-function
+function.
 
 
