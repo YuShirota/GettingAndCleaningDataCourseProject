@@ -13,10 +13,10 @@ smartphone used by 30 subjects while doing 6 different kinds of activities
 ### Files included in project
 README.md       -   readme markdown text file.
 
-CodeBook.md     -   markdown text file than describes the variables, the data, and 
+CodeBook.md     -   markdown text file that describes the variables, the data, and 
                     another work performed to clean up the data
 
-run_analisys.R  -   R script that does all operations to make tidy data set from
+run_analysis.R  -   R script that does all operations to make tidy data set from
                     data represented at the web. 
                     
 ### Software requirements
@@ -27,8 +27,8 @@ RStudio version 0.98.1102 (optional)
 ### Usage of data analysis script
 1. Run R console or RStudio.
 2. Check/set working directory using getwd()/setwd() commands. For 
-work with data represended working directory check free disk space, must
-have at least 100 Mb in it. 
+work with data represended working directory check free disk space, it must
+have at least 100 Mb free space in it. 
 3. Load run_analysis.R script using open file command.
 4. Run run_analysis.R script using Run All command.
 5. After completion of all operations script will print a message

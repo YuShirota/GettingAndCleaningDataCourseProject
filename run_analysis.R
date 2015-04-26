@@ -15,6 +15,12 @@
 
 ## function file.crdownload downloads file and puts a date into separate R file
 ## to know when file was downloaded. If file already exists, shows that date
+## parameters:
+## fileUrl -  character, url of file to download
+## destdir -  character, relative(to working directory) path to directory in
+##      which downloaded file will be placed
+## destfile -  charactername of file which will be saved on disk
+## extension - characterfile ext. name, after .
 
 file.crdownload <- function(fileUrl,destdir, destfile, extension) {
         
@@ -49,6 +55,10 @@ file.crdownload <- function(fileUrl,destdir, destfile, extension) {
 ## and returns structure of folders and files in that directory after 
 ## unpacking to provide easier further processing using these files
 ## in list are only txt files
+## parameters:
+## filename - character. Name of packed file
+## dir - character. Relative(to working directory) path to catalog in which
+## file will be unpacked
 
 file.unpack <- function(filename, dir) {
         
@@ -210,7 +220,7 @@ fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%2
 
 destdir      <- "data"
 destfile     <- "HAR_Dataset.zip"
-resultfile   <- "resultdata.txt"
+resultfile   <- "result_data.txt"
 extension    <- ".zip"
 unpackdir    <- paste0(destdir,"/","unpacked")
 destfilename <- paste0("./",destdir,"/",destfile)
@@ -256,12 +266,14 @@ result_data <- all_data[,
                         .SDcols = needed_cols
                         ][order(subject,activity)]
 
+## This line must be commented if it's needed to show data transformation knitting
+## CodeBook.md file
 rm(all_data)
 
 ## rename columns (and activity values) to make them more readable
 setnames(result_data,colnames(result_data),sub(colnames(result_data),
                                                pattern = "^t",
-                                               replacement = "triangular"))
+                                               replacement = "time"))
 setnames(result_data,colnames(result_data),sub(colnames(result_data),
                                                pattern = "^f",
                                                replacement = "fouriertransf"))
